@@ -7,8 +7,8 @@ void inverse(int n)
 	int i=0;
 	if(n==0)
 	return;
-	cin>>i;
-	inverse(--n);
+	cin>>i;				//***** 
+	inverse(--n);		//*****
 	cout<<setw(4)<<i;
 }
 
