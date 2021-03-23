@@ -15,7 +15,7 @@ int main()
 	//冒泡排序
 	//外边循环次数为数组长度减1，内循环次数为数组长度减排序轮数减1 
 	for(i=0;i<m-1;i++){
-		for(int j=0;j<m-i-1;j++){
+		for(int j=0;j<m-1-i;j++){
 			if(arr[j]>arr[j+1]){
 				tmp=arr[j];
 				arr[j]=arr[j+1];
