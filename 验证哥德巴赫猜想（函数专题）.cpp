@@ -8,8 +8,7 @@ int main()
 	int n;
 	cin>>n;
 	for(int i=2;i<=n;i++){
-		int y=prime(i);
-		if(y==1){
+		if(prime(i)){
 			for(int j=i;j<=n;j++){
 				if(i+j==n&&prime(j)==1){
 					cout<<i<<" "<<j<<endl;
