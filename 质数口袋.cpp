@@ -19,11 +19,6 @@ int main()
 	long long a[100000];//数组
 	cin >> n;
 	long long x = 2;//要判断的x从2开始
-	if(n == 0 || n == 1)//n==0，n==1要特判
-	    {
-	    	cout << "0" << endl;
-	    	return 0;
-		}
 	while(sum <= n)//循环开始！！
 	    {
 	    	if(x == 2)//当x==2时特判，否则输出不了
