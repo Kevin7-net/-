@@ -3,9 +3,9 @@
 using namespace std;
 
 int main()
-{
+{ 
 	float y=1.5f;
-	
+	cout<<endl;
 	for(;y > -1.5f;y-= 0.1f) {
 	
 	float x=-1.5f;
