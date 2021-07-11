@@ -3,7 +3,7 @@ using namespace std;
 int a[15][15];
 int main()
 {
-	int n,k=1,x=1,y=0;;
+	int n,k=1,x=1,y=0;
 	cin>>n;
 	while (k<=n*n)
 	{
