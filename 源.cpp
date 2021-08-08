@@ -1,26 +1,81 @@
 #include<iostream>
-#include<algorithm>
+#include<string>
 using namespace std;
 
-int a[100000];
+class Building
+{
+	friend class goodGay;
 
-int cmp(int a,int b){
-	return a > b;
+public:
+	Building()
+	{
+		this->m_SittingRoom = "客厅";
+		this->m_BedRoom = "卧室";
+	}
+
+public:
+	string m_SittingRoom;
+private:
+	string m_BedRoom;
+};
+
+class goodGay
+{
+public:
+	goodGay()
+	{
+		building = new Building;
+	}
+	void visit()
+	{
+		cout << "好基友正在访问" << building->m_SittingRoom << endl;
+		cout << "好基友正在访问" << building->m_BedRoom << endl;
+	}
+private:
+	Building* building;
+};
+//
+//class Building
+//{
+//	friend class goodGay;
+//
+//public:
+//	Building()
+//	{
+//		this->m_SittingRoom = "客厅";
+//		this->m_BedRoom = "卧室";
+//	}
+//
+//public:
+//	string m_SittingRoom;
+//private:
+//	string m_BedRoom;
+//};
+
+//Building::Building()
+//{
+//	this->m_SittingRoom = "客厅";
+//	this->m_BedRoom = "卧室";
+//}
+
+//goodGay::goodGay()
+//{
+//	building = new Building;
+//}
+
+//void goodGay::visit()
+//{
+//	cout << "好基友正在访问" << building->m_SittingRoom << endl;
+//	cout << "好基友正在访问" << building->m_BedRoom << endl;
+//}
+
+void text01()
+{
+	goodGay gg;
+	gg.visit();
 }
 int main()
 {
-	int i;
-	long long n, h,sum=0;
-	cin >> n >> h;
-	for (i = 0; i < n; i++) {
-		cin >> a[i];
-	}
-	sort(a, a + n, cmp);
-	for (i = 0; i < n; i++) {
-		sum += a[i];
-		if (sum >= h)
-			break;
-	}
-	cout << i+1 << endl;
+	text01();
 	return 0;
 }
