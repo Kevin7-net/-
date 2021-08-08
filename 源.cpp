@@ -1,81 +1,33 @@
 #include<iostream>
-#include<string>
 using namespace std;
+#include<string>
 
 class Building
 {
-	friend class goodGay;
+	friend void goodGay(Building* building);
 
 public:
-	Building()
-	{
-		this->m_SittingRoom = "客厅";
-		this->m_BedRoom = "卧室";
+	Building() {
+		m_SittingRoom = "客厅";
+		m_BedRoom = "卧室";
 	}
-
 public:
 	string m_SittingRoom;
 private:
 	string m_BedRoom;
 };
-
-class goodGay
+void goodGay(Building* building)
 {
-public:
-	goodGay()
-	{
-		building = new Building;
-	}
-	void visit()
-	{
-		cout << "好基友正在访问" << building->m_SittingRoom << endl;
-		cout << "好基友正在访问" << building->m_BedRoom << endl;
-	}
-private:
-	Building* building;
-};
-//
-//class Building
-//{
-//	friend class goodGay;
-//
-//public:
-//	Building()
-//	{
-//		this->m_SittingRoom = "客厅";
-//		this->m_BedRoom = "卧室";
-//	}
-//
-//public:
-//	string m_SittingRoom;
-//private:
-//	string m_BedRoom;
-//};
-
-//Building::Building()
-//{
-//	this->m_SittingRoom = "客厅";
-//	this->m_BedRoom = "卧室";
-//}
-
-//goodGay::goodGay()
-//{
-//	building = new Building;
-//}
-
-//void goodGay::visit()
-//{
-//	cout << "好基友正在访问" << building->m_SittingRoom << endl;
-//	cout << "好基友正在访问" << building->m_BedRoom << endl;
-//}
-
-void text01()
+	cout << "好基友正在访问：" << building->m_SittingRoom << endl;
+	cout << "好基友正在访问：" << building->m_BedRoom << endl;
+}
+void test01()
 {
-	goodGay gg;
-	gg.visit();
+	Building building;
+	goodGay(&building);
 }
 int main()
 {
-	text01();
+	test01();
 	return 0;
 }
