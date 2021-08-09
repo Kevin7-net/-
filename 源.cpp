@@ -1,33 +1,15 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-#include<string>
-
-class Building
-{
-	friend void goodGay(Building* building);
-
-public:
-	Building() {
-		m_SittingRoom = "客厅";
-		m_BedRoom = "卧室";
-	}
-public:
-	string m_SittingRoom;
-private:
-	string m_BedRoom;
-};
-void goodGay(Building* building)
-{
-	cout << "好基友正在访问：" << building->m_SittingRoom << endl;
-	cout << "好基友正在访问：" << building->m_BedRoom << endl;
-}
-void test01()
-{
-	Building building;
-	goodGay(&building);
-}
-int main()
-{
-	test01();
-	return 0;
+int a[31], i = 0, j;
+long long s = 0;
+int main() {
+    //cout<<s;
+    while (cin >> a[i++]);//合写cin>>a[i];i++;
+    for (j = 0; j < i; j++) {
+        s += a[j];
+    }
+    s *= pow(2, i - 2);//注意，i-2!
+    cout << s;
+    return 0;
 }
